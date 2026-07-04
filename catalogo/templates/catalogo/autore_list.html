@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block titolo %}Autori{% endblock %}
+
+{% block contenuto %}
+<h1 class="h3 mb-4"><i class="bi bi-people me-2 text-primary"></i>Autori</h1>
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+  {% for autore in autori %}
+  <div class="col">
+    <div class="card h-100 border-0 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title mb-1">
+          <a href="{% url 'catalogo:dettaglio_autore' autore.pk %}"
+             class="text-decoration-none text-dark stretched-link">
+            {{ autore }}  {# usa __str__: "Cognome, Nome" #}
+          </a>
+        </h5>
+        {% if autore.data_nascita %}
+        <p class="text-muted small mb-2">
+          {# |date:"Y" estrae solo l anno dalla data #}
+          <i class="bi bi-calendar3 me-1"></i>{{ autore.data_nascita|date:"Y" }}
+        </p>
+        {% endif %}
+        {# n_libri e il campo annotato calcolato da Count() nella View #}
+        <span class="badge bg-primary">{{ autore.n_libri }} libro/libri</span>
+      </div>
+    </div>
+  </div>
+  {# {% empty %}: mostrato se autori e una lista vuota #}
+  {% empty %}
+  <p class="text-muted">Nessun autore presente nel catalogo.</p>
+  {% endfor %}
+</div>
+{% endblock %}

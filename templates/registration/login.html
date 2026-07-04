@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block titolo %}Accedi{% endblock %}
+
+{% block contenuto %}
+<div class="row justify-content-center">
+  <div class="col-md-4">
+    <div class="card border-0 shadow-sm mt-4">
+      <div class="card-body p-4">
+        <h1 class="h4 text-center mb-4">
+          <i class="bi bi-box-arrow-in-right me-2 text-primary"></i>Accedi
+        </h1>
+        {# form e l AuthenticationForm fornito da django.contrib.auth #}
+        <form method="post">
+          {% csrf_token %}
+          {% for field in form %}
+          <div class="mb-3">
+            <label class="form-label fw-semibold">{{ field.label }}</label>
+            {# Aggiungiamo manualmente le classi Bootstrap perche AuthenticationForm
+               non ha widget personalizzati come il nostro LibroForm #}
+            <input type="{{ field.field.widget.input_type }}"
+                   name="{{ field.html_name }}"
+                   class="form-control {% if field.errors %}is-invalid{% endif %}"
+                   {% if field.value %}value="{{ field.value }}"{% endif %}>
+            {% for error in field.errors %}
+            <div class="invalid-feedback">{{ error }}</div>
+            {% endfor %}
+          </div>
+          {% endfor %}
+          {# Errori di autenticazione (username/password errati) #}
+          {% if form.non_field_errors %}
+          <div class="alert alert-danger small">{{ form.non_field_errors }}</div>
+          {% endif %}
+          <button type="submit" class="btn btn-primary w-100 mt-2">Accedi</button>
+        </form>
+        <p class="text-center mt-3 small">
+          Non hai un account?
+          <a href="{% url 'catalogo:registrazione' %}">Registrati</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

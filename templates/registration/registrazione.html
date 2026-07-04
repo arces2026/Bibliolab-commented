@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block titolo %}Registrazione{% endblock %}
+
+{% block contenuto %}
+<div class="row justify-content-center">
+  <div class="col-md-5">
+    <div class="card border-0 shadow-sm mt-4">
+      <div class="card-body p-4">
+        <h1 class="h4 text-center mb-4">Crea il tuo account</h1>
+        {# form e il RegistrazioneForm definito in forms.py #}
+        <form method="post">
+          {% csrf_token %}
+          {% for field in form %}
+          <div class="mb-3">
+            <label class="form-label fw-semibold">{{ field.label }}</label>
+            {# I widget del RegistrazioneForm hanno gia le classi Bootstrap (definite in forms.py) #}
+            {{ field }}
+            {# Mostra gli errori di validazione di ogni campo (es. password troppo corta) #}
+            {% for error in field.errors %}
+            <div class="text-danger small mt-1">{{ error }}</div>
+            {% endfor %}
+          </div>
+          {% endfor %}
+          <button type="submit" class="btn btn-primary w-100 mt-2">
+            <i class="bi bi-person-plus me-1"></i>Registrati
+          </button>
+        </form>
+        <p class="text-center mt-3 small">
+          Hai gia un account? <a href="{% url 'login' %}">Accedi</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

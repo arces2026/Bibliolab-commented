@@ -1,0 +1,45 @@
+# .gitignore — file e cartelle escluse dal controllo versione Git.
+#
+# Tutto quello che e in questo file NON viene committato su Git.
+# Motivi principali: file sensibili (password), file generati, file locali.
+
+# ── AMBIENTE VIRTUALE ────────────────────────────────────────────────────────
+# L ambiente virtuale non si committa: ogni sviluppatore lo crea localmente.
+# pip install -r requirements.txt ricostruisce l ambiente da requirements.txt.
+venv/
+.venv/
+env/
+
+# ── DATABASE LOCALE ──────────────────────────────────────────────────────────
+# Il database SQLite di sviluppo e locale — ogni sviluppatore ha il suo.
+# In produzione si usa PostgreSQL (configurato in docker-compose.yml).
+*.sqlite3
+
+# ── FILE COMPILATI PYTHON ────────────────────────────────────────────────────
+# Python genera questi file automaticamente — non servono nel repository.
+__pycache__/
+*.py[cod]    # .pyc, .pyo, .pyd
+*.pyo
+
+# ── FILE STATICI RACCOLTI ────────────────────────────────────────────────────
+# staticfiles/ viene generato da collectstatic — si rigenera ad ogni deploy.
+staticfiles/
+
+# ── FILE MEDIA ────────────────────────────────────────────────────────────────
+# I file caricati dagli utenti sono locali e non si gestiscono con Git.
+media/
+
+# ── VARIABILI D AMBIENTE ─────────────────────────────────────────────────────
+# IMPORTANTE: .env contiene password e chiavi segrete — MAI su Git!
+.env
+.env.local
+.env.production
+
+# ── EDITOR E SISTEMA OPERATIVO ───────────────────────────────────────────────
+.vscode/          # configurazioni VS Code locali
+.idea/            # configurazioni PyCharm
+.DS_Store         # file macOS
+Thumbs.db         # file Windows
+
+# ── LOG ──────────────────────────────────────────────────────────────────────
+*.log

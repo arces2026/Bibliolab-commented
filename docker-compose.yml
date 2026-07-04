@@ -1,0 +1,92 @@
+# docker-compose.yml — orchestrazione dei servizi Docker di BiblioLab.
+#
+# Definisce due servizi che girano in container separati ma comunicano tra loro:
+#   - db: database PostgreSQL
+#   - web: applicazione Django con Gunicorn
+#
+# Avviare con: docker-compose up --build
+# Fermare con: docker-compose down
+
+version: '3.9'  # versione della sintassi docker-compose
+
+services:
+
+  # ── DATABASE PostgreSQL ─────────────────────────────────────────────────────
+  db:
+    # image: usa l immagine ufficiale PostgreSQL 15 in versione alpine (molto leggera).
+    image: postgres:15-alpine
+
+    # restart: unless-stopped: riavvia automaticamente se il container crasha,
+    # ma non se viene fermato manualmente con docker-compose stop.
+    restart: unless-stopped
+
+    # environment: variabili d ambiente passate al container del database.
+    # postgres:15-alpine le usa per inizializzare il database al primo avvio.
+    environment:
+      POSTGRES_DB:       bibliolab_db        # nome del database da creare
+      POSTGRES_USER:     bibliolab_user      # utente del database
+      POSTGRES_PASSWORD: ${DB_PASSWORD}      # password letta dal file .env
+
+    # volumes: monta un volume Docker per persistere i dati del database.
+    # Senza questo, i dati vengono persi ogni volta che il container viene ricreato.
+    # postgres_data:/var/lib/postgresql/data = volume named montato nella cartella dati di PostgreSQL.
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+    # healthcheck: verifica periodicamente se PostgreSQL e pronto ad accettare connessioni.
+    # Usato da depends_on nel servizio web per aspettare che il DB sia davvero avviato.
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U bibliolab_user -d bibliolab_db']
+      # pg_isready: comando PostgreSQL che verifica se il server accetta connessioni.
+      interval: 10s    # controlla ogni 10 secondi
+      timeout: 5s      # timeout di 5 secondi per ogni controllo
+      retries: 5       # dopo 5 fallimenti consecutivi il container e considerato "unhealthy"
+
+  # ── APPLICAZIONE DJANGO ─────────────────────────────────────────────────────
+  web:
+    # build: .: costruisce l immagine usando il Dockerfile nella cartella corrente (.).
+    # Al primo avvio o quando il codice cambia, eseguire: docker-compose up --build
+    build: .
+
+    restart: unless-stopped
+
+    # ports: mappa la porta del container a quella dell host.
+    # "8000:8000" = porta 8000 del computer host → porta 8000 del container.
+    # Dopo il deploy, visitate http://localhost:8000/
+    ports:
+      - '8000:8000'
+
+    # environment: variabili d ambiente per Django in produzione.
+    environment:
+      SECRET_KEY:     ${SECRET_KEY}      # dalla variabile d ambiente dell host (file .env)
+      DEBUG:          'False'            # produzione: DEBUG sempre False
+      ALLOWED_HOSTS:  'localhost,127.0.0.1'
+      # DATABASE_URL: stringa di connessione a PostgreSQL.
+      # 'db' e il nome del servizio Docker — Docker Compose crea automaticamente
+      # un record DNS interno che risolve 'db' all indirizzo IP del container db.
+      DATABASE_URL:   postgres://bibliolab_user:${DB_PASSWORD}@db:5432/bibliolab_db
+
+    # depends_on: specifica le dipendenze tra servizi.
+    # condition: service_healthy: aspetta che il container db sia "healthy"
+    # (definito dall healthcheck) prima di avviare web.
+    # Senza questo, Django potrebbe tentare di connettersi a PostgreSQL prima che sia pronto.
+    depends_on:
+      db:
+        condition: service_healthy
+
+    # command: sovrascrive il CMD del Dockerfile.
+    # Il > yaml permette di scrivere su piu righe con spazi.
+    # Esegue in sequenza:
+    #   1. migrate: applica le migrazioni pendenti al database PostgreSQL
+    #   2. loaddata: carica i dati di esempio dalla fixture
+    #   3. gunicorn: avvia il server di produzione
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py loaddata catalogo/fixtures/dati_iniziali.json &&
+             gunicorn bibliolab.wsgi:application --bind 0.0.0.0:8000 --workers 3"
+
+# ── VOLUMES ───────────────────────────────────────────────────────────────────
+# Dichiara i volumi named usati dai servizi.
+# I volumi named sono gestiti da Docker: sopravvivono ai restart e alle ricostruzioni.
+volumes:
+  postgres_data:   # i dati di PostgreSQL persistono qui tra un docker-compose down e il successivo up

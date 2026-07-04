@@ -1,0 +1,160 @@
+{% extends 'base.html' %}  {# eredita tutta la struttura da base.html #}
+{% comment %}
+libro_list.html — lista di tutti i libri con ricerca, filtri e paginazione.
+Estende base.html: sovrascrive solo i blocchi 'titolo' e 'contenuto'.
+{% endcomment %}
+
+
+{% block titolo %}Catalogo libri{% endblock %}  {# imposta il titolo del tab browser #}
+
+{% block contenuto %}
+{# ── INTESTAZIONE ─────────────────────────────────────────────────────────── #}
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <h1 class="h3 mb-0"><i class="bi bi-journals me-2 text-primary"></i>Catalogo libri</h1>
+  {% if user.is_authenticated %}
+  <a href="{% url 'catalogo:crea_libro' %}" class="btn btn-primary">
+    <i class="bi bi-plus-lg me-1"></i>Aggiungi libro
+  </a>
+  {% endif %}
+</div>
+
+{# ── FORM FILTRI ──────────────────────────────────────────────────────────── #}
+<div class="card mb-4 border-0 bg-light">
+  <div class="card-body py-3">
+    {# method="get": i filtri vanno nell URL come parametri (?cerca=...&categoria=...) #}
+    {# Questo permette di condividere/salvare l URL della ricerca #}
+    <form method="get" class="row g-2 align-items-end">
+
+      <div class="col-md-6">
+        <label class="form-label small fw-semibold">Cerca per titolo o autore</label>
+        {# value="{{ query }}" mantiene il valore inserito dopo il submit #}
+        <input type="text" name="cerca" class="form-control"
+               placeholder="Es: Eco, romanzo..." value="{{ query }}">
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label small fw-semibold">Filtra per categoria</label>
+        <select name="categoria" class="form-select">
+          <option value="">Tutte le categorie</option>
+          {# Itera sulle categorie passate dal context (get_context_data nella View) #}
+          {% for cat in categorie %}
+          {# selected: evidenzia la categoria attualmente selezionata #}
+          {# cat.pk|stringformat:"s" converte pk (intero) in stringa per confrontarlo con cat_attiva (stringa) #}
+          <option value="{{ cat.pk }}" {% if cat.pk|stringformat:"s" == cat_attiva %}selected{% endif %}>
+            {{ cat.nome }}
+          </option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="col-md-2">
+        <button type="submit" class="btn btn-primary w-100">
+          <i class="bi bi-search me-1"></i>Filtra
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+{# ── INFO RISULTATI ───────────────────────────────────────────────────────── #}
+{# Mostra il numero di risultati solo se e attivo un filtro #}
+{% if query or cat_attiva %}
+<p class="text-muted small mb-3">
+  {# paginator.count e il totale di oggetti (non solo la pagina corrente) — fornito da ListView #}
+  Trovati <strong>{{ paginator.count }}</strong> libro/libri.
+  <a href="{% url 'catalogo:lista_libri' %}" class="ms-2">Rimuovi filtri</a>
+</p>
+{% endif %}
+
+{# ── GRIGLIA LIBRI ────────────────────────────────────────────────────────── #}
+{# libri e la variabile definita da context_object_name nella ListView #}
+{% if libri %}
+<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4">
+  {% for libro in libri %}
+  <div class="col">
+    <div class="card h-100 shadow-sm border-0">
+      <div class="card-body">
+        <h5 class="card-title">
+          {# stretched-link espande l area cliccabile a tutta la card (CSS Bootstrap) #}
+          <a href="{% url 'catalogo:dettaglio_libro' libro.pk %}"
+             class="text-decoration-none text-dark stretched-link">
+            {{ libro.titolo }}
+          </a>
+        </h5>
+        <p class="card-subtitle text-muted mb-2">
+          <i class="bi bi-person me-1"></i>
+          {# z-index:1 sovrasta lo stretched-link per rendere questo link cliccabile separatamente #}
+          <a href="{% url 'catalogo:dettaglio_autore' libro.autore.pk %}"
+             class="text-muted text-decoration-none" style="position:relative;z-index:1">
+            {{ libro.autore }}  {# chiama __str__ di Autore: "Cognome, Nome" #}
+          </a>
+        </p>
+        <p class="text-muted small mb-2">
+          <i class="bi bi-calendar3 me-1"></i>{{ libro.anno_pubblicazione }}
+        </p>
+        {# Itera sulle categorie del libro (ManyToMany) #}
+        {% for cat in libro.categorie.all %}
+        <span class="badge bg-secondary me-1">{{ cat.nome }}</span>
+        {% endfor %}
+      </div>
+      <div class="card-footer bg-transparent border-0 pt-0">
+        {% if libro.disponibile %}
+        <span class="badge bg-success"><i class="bi bi-check-circle me-1"></i>Disponibile</span>
+        {% else %}
+        <span class="badge bg-danger"><i class="bi bi-x-circle me-1"></i>Non disponibile</span>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{# ── PAGINAZIONE ──────────────────────────────────────────────────────────── #}
+{# is_paginated e True se ci sono piu pagine (paginate_by nella ListView) #}
+{% if is_paginated %}
+<nav class="mt-5" aria-label="Navigazione pagine">
+  <ul class="pagination justify-content-center">
+
+    {# Freccia sinistra: visibile solo se esiste una pagina precedente #}
+    {% if page_obj.has_previous %}
+    <li class="page-item">
+      {# Mantiene i parametri di ricerca nell URL della pagina precedente #}
+      <a class="page-link" href="?{% if query %}cerca={{ query }}&{% endif %}page={{ page_obj.previous_page_number }}">
+        <i class="bi bi-chevron-left"></i>
+      </a>
+    </li>
+    {% endif %}
+
+    {# Numeri di pagina: paginator.page_range e un range() del numero totale di pagine #}
+    {% for num in paginator.page_range %}
+    <li class="page-item {% if num == page_obj.number %}active{% endif %}">
+      <a class="page-link" href="?{% if query %}cerca={{ query }}&{% endif %}page={{ num }}">{{ num }}</a>
+    </li>
+    {% endfor %}
+
+    {% if page_obj.has_next %}
+    <li class="page-item">
+      <a class="page-link" href="?{% if query %}cerca={{ query }}&{% endif %}page={{ page_obj.next_page_number }}">
+        <i class="bi bi-chevron-right"></i>
+      </a>
+    </li>
+    {% endif %}
+
+  </ul>
+</nav>
+{% endif %}
+
+{% else %}
+{# Messaggio se non ci sono libri (QuerySet vuota) #}
+<div class="text-center py-5">
+  <i class="bi bi-search display-1 text-muted"></i>
+  <p class="text-muted mt-3">Nessun libro trovato.</p>
+  {% if user.is_authenticated %}
+  <a href="{% url 'catalogo:crea_libro' %}" class="btn btn-primary mt-2">
+    <i class="bi bi-plus-lg me-1"></i>Aggiungi il primo libro
+  </a>
+  {% endif %}
+</div>
+{% endif %}
+{% endblock %}

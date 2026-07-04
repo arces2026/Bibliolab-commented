@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% comment %}
+libro_form.html — form per creare e modificare un libro.
+Usato sia da crea_libro (form vuoto) che da modifica_libro (form precompilato).
+Il template e identico nei due casi — la View passa il contesto appropriato.
+{% endcomment %}
+
+
+{# default: se titolo_pagina non e nel contesto, usa 'Libro' come fallback #}
+{% block titolo %}{{ titolo_pagina|default:'Libro' }}{% endblock %}
+
+{% block contenuto %}
+<div class="row justify-content-center">
+  <div class="col-lg-7">
+    <h1 class="h3 mb-4">
+      <i class="bi bi-book me-2 text-primary"></i>{{ titolo_pagina|default:'Libro' }}
+    </h1>
+    <div class="card border-0 shadow-sm">
+      <div class="card-body p-4">
+
+        <form method="post">  {# method="post": invia i dati al server in modo sicuro #}
+          {% csrf_token %}  {# OBBLIGATORIO in ogni form POST: protegge da attacchi CSRF #}
+
+          {# Errori non legati a un campo specifico (dal metodo clean() del Form) #}
+          {% if form.non_field_errors %}
+          <div class="alert alert-danger">{{ form.non_field_errors }}</div>
+          {% endif %}
+
+          {# Itera su tutti i campi del form — l ordine segue 'fields' in Meta #}
+          {% for field in form %}
+          <div class="mb-3">
+
+            {# field.id_for_label: genera l id corretto per il <label> (es. "id_titolo") #}
+            <label for="{{ field.id_for_label }}" class="form-label fw-semibold">
+              {{ field.label }}
+              {# field.field.required: True se il campo e obbligatorio nel Form #}
+              {% if field.field.required %}<span class="text-danger">*</span>{% endif %}
+            </label>
+
+            {# {{ field }} renderizza il widget HTML del campo (input, select, checkbox...) #}
+            {# Le classi CSS Bootstrap sono gia impostate nei widget del Form (forms.py) #}
+            {{ field }}
+
+            {# Testo di aiuto definito in help_texts della classe Meta del Form #}
+            {% if field.help_text %}
+            <div class="form-text">{{ field.help_text }}</div>
+            {% endif %}
+
+            {# Errori di validazione specifici di questo campo #}
+            {% for error in field.errors %}
+            <div class="text-danger small mt-1">
+              <i class="bi bi-exclamation-circle me-1"></i>{{ error }}
+            </div>
+            {% endfor %}
+
+          </div>
+          {% endfor %}
+
+          <div class="d-flex gap-2 mt-4">
+            <button type="submit" class="btn btn-primary">
+              <i class="bi bi-save me-1"></i>{{ testo_bottone|default:'Salva' }}
+            </button>
+            <a href="{% url 'catalogo:lista_libri' %}" class="btn btn-outline-secondary">Annulla</a>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

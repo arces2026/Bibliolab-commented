@@ -1,0 +1,12 @@
+# requirements.txt — elenco delle dipendenze Python del progetto.
+# Installare con: pip install -r requirements.txt
+# Il vincolo di versione >=X,<Y garantisce compatibilità senza bloccare gli aggiornamenti minori.
+
+# Django>=4.2,<5.0          # il framework web principale
+Django>=5.0,<6.0          # il framework web principale
+Pillow>=10.0              # libreria per la gestione delle immagini (richiesta da ImageField)
+gunicorn>=21.0            # server WSGI per la produzione (sostituisce manage.py runserver)
+whitenoise>=6.6           # serve i file statici direttamente da Django in produzione
+psycopg2-binary>=2.9      # driver Python per PostgreSQL (usato in produzione con Docker)
+dj-database-url>=2.1      # converte DATABASE_URL in dizionario DATABASES per Django
+djangorestframework>=3.14 # Django REST Framework per le API JSON
