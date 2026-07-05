@@ -20,3 +20,9 @@ Request URL:	http://localhost:8000/api/v1/libri/
 The {% extends %} tag has to be the first in the template, even before the {% comment %} tag
 
 ## Dockerfile
+
+Solved by eliminating New line error in the CMD list.
+
+## Database manager connection in production (es. Dbeaver)
+
+Not compatible with SCRAM-SHA-256 authentication

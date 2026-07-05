@@ -20,6 +20,9 @@ services:
     # ma non se viene fermato manualmente con docker-compose stop.
     restart: unless-stopped
 
+    ports:
+      - "5432:5432"
+
     # environment: variabili d ambiente passate al container del database.
     # postgres:15-alpine le usa per inizializzare il database al primo avvio.
     environment:
