@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get(
 )
 
 # DEBUG=True mostra stack trace agli utenti (utile in sviluppo, pericoloso in produzione).
-# La variabile d ambiente e una stringa, quindi confrontiamo con la stringa 'True'.
+# La variabile d'ambiente è una stringa, quindi confrontiamo con la stringa 'True'.
 DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
 # ALLOWED_HOSTS: domini da cui Django accetta richieste.
