@@ -1,0 +1,77 @@
+/*
+ * bibliolab.css — stile personalizzato di BiblioLab.
+ *
+ * Questo file viene caricato DOPO Bootstrap, quindi puo sovrascrivere
+ * qualsiasi stile di Bootstrap usando classi piu specifiche o !important.
+ *
+ * Non modifichiamo Bootstrap direttamente: aggiorniamo qui.
+ */
+
+/* ── VARIABILI CSS ─────────────────────────────────────────────────────────── */
+/*
+ * :root definisce variabili CSS globali (custom properties).
+ * Usando var(--bl-blu) ovunque, se cambiamo il colore lo cambiamo in un posto solo.
+ */
+:root {
+  --bl-blu: #1e3a8a;   /* blu ARCES — usato per navbar, titoli, paginazione */
+  --bl-oro: #fbbf24;   /* oro ARCES — usato per bordi decorativi */
+}
+
+/* ── NAVBAR ────────────────────────────────────────────────────────────────── */
+/*
+ * Sovrascrive il colore di sfondo di Bootstrap .bg-primary.
+ * !important e necessario per avere precedenza sullo stile Bootstrap.
+ */
+.navbar.bg-primary {
+  background-color: var(--bl-blu) !important;
+}
+
+/* ── BREADCRUMB ────────────────────────────────────────────────────────────── */
+/* I link nel breadcrumb usano il blu ARCES invece del blu Bootstrap. */
+.breadcrumb-item a {
+  color: var(--bl-blu);
+  text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+  text-decoration: underline;  /* feedback visivo al passaggio del mouse */
+}
+
+/* ── BADGE CATEGORIE ───────────────────────────────────────────────────────── */
+/* Sovrascrive il grigio Bootstrap con uno piu scuro e professionale. */
+.badge.bg-secondary {
+  background-color: #475569 !important;
+}
+
+/* ── PAGINAZIONE ───────────────────────────────────────────────────────────── */
+/* La pagina attiva usa il blu ARCES invece del blu Bootstrap default. */
+.page-item.active .page-link {
+  background-color: var(--bl-blu);
+  border-color: var(--bl-blu);
+}
+
+/* Il colore dei link di paginazione non attivi. */
+.page-link {
+  color: var(--bl-blu);
+}
+
+/* ── CARD HOVER ────────────────────────────────────────────────────────────── */
+/*
+ * Effetto hover sulle card: lieve sollevamento con ombra piu profonda.
+ * transition: anima la trasformazione in 0.2 secondi (smooth).
+ * transform: translateY(-2px) sposta la card di 2px verso l alto.
+ */
+.card.shadow-sm {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.card.shadow-sm:hover {
+  /* rgba(30, 58, 138, 0.12): blu ARCES con 12% di opacita */
+  box-shadow: 0 4px 16px rgba(30, 58, 138, 0.12) !important;
+  transform: translateY(-2px);
+}
+
+/* ── FOOTER ────────────────────────────────────────────────────────────────── */
+footer {
+  font-size: 0.85rem;  /* testo leggermente piu piccolo del normale */
+}
