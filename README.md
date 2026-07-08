@@ -29,7 +29,8 @@ bibliolab/
 │   ├── static/catalogo/css/    # CSS personalizzato
 │   ├── migrations/             # storia delle modifiche al database
 │   └── templates/catalogo/     # template HTML
-└── templates/                  # template globali (base.html, login...)
+├── templates/                  # template globali (base.html, login...)
+└── staticfiles
 ```
 
 ## Avvio rapido (sviluppo locale)

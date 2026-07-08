@@ -136,7 +136,7 @@ USE_TZ        = True           # usa datetime con fuso orario (timezone-aware)
 
 STATIC_URL       = '/static/'                  # URL base per i file statici nel browser
 STATICFILES_DIRS = [BASE_DIR / 'static']       # cartelle statici globali del progetto
-STATIC_ROOT      = BASE_DIR / 'staticfiles'    # destinazione di collectstatic (produzione)
+STATIC_ROOT      = BASE_DIR / 'staticfiles'    # destinazione di collectstatic (produzione cartella creata da collectstatic)
 
 # Whitenoise: serve i file statici con compressione gzip e hash nel nome per il caching.
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

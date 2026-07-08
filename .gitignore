@@ -24,6 +24,7 @@ __pycache__/
 # ── FILE STATICI RACCOLTI ────────────────────────────────────────────────────
 # staticfiles/ viene generato da collectstatic — si rigenera ad ogni deploy.
 staticfiles/
+static/staticfiles.json
 
 # ── FILE MEDIA ────────────────────────────────────────────────────────────────
 # I file caricati dagli utenti sono locali e non si gestiscono con Git.
