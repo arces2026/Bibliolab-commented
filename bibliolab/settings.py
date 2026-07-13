@@ -38,10 +38,45 @@ DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 # Con DEBUG=True Django accetta tutto; con DEBUG=False questa lista e obbligatoria.
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '127.0.0.1,localhost').split(',')
 
+ALLOWED_ORIGIN = os.environ.get("ALLOWED_ORIGIN", "http://localhost:5173")
+
+# CORS
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+]
+
+# CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
+
+# In fondo a settings.py, dopo CORS_ALLOWED_ORIGINS
+CORS_ALLOW_METHODS = [
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
+]
+
+CORS_ALLOW_HEADERS = [
+    "accept",
+    "accept-encoding",
+    "authorization",
+    "content-type",
+    "dnt",
+    "origin",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
+]
+
+CORS_PREFLIGHT_MAX_AGE = 86400  # 24 ore
 # ── APP INSTALLATE ────────────────────────────────────────────────────────────
 
 INSTALLED_APPS = [
     # App built-in di Django:
+    'corsheaders',                 # aggiunto per accedere ad localhost:5173
     'django.contrib.admin',        # pannello admin automatico (/admin/)
     'django.contrib.auth',         # autenticazione: User, login, logout, permessi
     'django.contrib.contenttypes', # framework per relazioni generiche tra Model
@@ -60,14 +95,15 @@ INSTALLED_APPS = [
 # L ordine e importante: la richiesta segue l ordine scritto,
 # la risposta segue l ordine inverso.
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',          # header HTTP di sicurezza
-    'whitenoise.middleware.WhiteNoiseMiddleware',             # file statici in produzione (subito dopo Security)
-    'django.contrib.sessions.middleware.SessionMiddleware',   # abilita le sessioni
-    'django.middleware.common.CommonMiddleware',              # trailing slash, Content-Length...
-    'django.middleware.csrf.CsrfViewMiddleware',              # protezione CSRF sui form POST
-    'django.contrib.auth.middleware.AuthenticationMiddleware',# collega request.user all utente
-    'django.contrib.messages.middleware.MessageMiddleware',   # messaggi flash
-    'django.middleware.clickjacking.XFrameOptionsMiddleware', # protezione clickjacking
+    "django.middleware.security.SecurityMiddleware",  # header HTTP di sicurezza
+    "corsheaders.middleware.CorsMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",  # file statici in produzione (subito dopo Security)
+    "django.contrib.sessions.middleware.SessionMiddleware",  # abilita le sessioni
+    "django.middleware.common.CommonMiddleware",  # trailing slash, Content-Length...
+    "django.middleware.csrf.CsrfViewMiddleware",  # protezione CSRF sui form POST
+    "django.contrib.auth.middleware.AuthenticationMiddleware",  # collega request.user all utente
+    "django.contrib.messages.middleware.MessageMiddleware",  # messaggi flash
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",  # protezione clickjacking
 ]
 
 # ROOT_URLCONF: dove si trova la rubrica principale degli URL del progetto.
@@ -160,13 +196,16 @@ LOGOUT_REDIRECT_URL = '/'                 # redirect dopo logout
 # ── DJANGO REST FRAMEWORK ─────────────────────────────────────────────────────
 
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
+    "DEFAULT_PERMISSION_CLASSES": [
         # Lettura libera per tutti; scrittura solo per utenti autenticati.
-        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+        "rest_framework.permissions.IsAuthenticatedOrReadOnly",
     ],
     # Paginazione automatica: 10 oggetti per pagina.
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 10,
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
+    "PAGE_SIZE": 10,
+    "DEFAULT_RENDERER_CLASSES": [
+        "rest_framework.renderers.JSONRenderer",
+    ],
 }
 
 # ── MESSAGGI FLASH ────────────────────────────────────────────────────────────

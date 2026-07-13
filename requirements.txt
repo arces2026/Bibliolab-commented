@@ -2,11 +2,35 @@
 # Installare con: pip install -r requirements.txt
 # Il vincolo di versione >=X,<Y garantisce compatibilità senza bloccare gli aggiornamenti minori.
 
-# Django>=4.2,<5.0          # il framework web principale
+asgiref==3.11.1           # ASGI server framework - gestisce connessioni asincrone e WebSocket
 Django>=5.0,<6.0          # il framework web principale
+django-cors-headers==4.9.0 # Gestisce gli header CORS per permettere richieste da frontend su domini diversi
 Pillow>=10.0              # libreria per la gestione delle immagini (richiesta da ImageField)
 gunicorn>=21.0            # server WSGI per la produzione (sostituisce manage.py runserver)
 whitenoise>=6.6           # serve i file statici direttamente da Django in produzione
 psycopg2-binary>=2.9      # driver Python per PostgreSQL (usato in produzione con Docker)
 dj-database-url>=2.1      # converte DATABASE_URL in dizionario DATABASES per Django
 djangorestframework>=3.14 # Django REST Framework per le API JSON
+packaging==26.2           # Utilità per versioning e dipendenze (usato da setuptools/pip)
+sqlparse==0.5.5           # Parser SQL per Django - formatta e analizza query SQL
+tzdata==2026.2            # Timezone database per Django - gestisce fusi orari
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
