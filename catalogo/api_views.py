@@ -56,6 +56,8 @@ def api_libri(request):
             'anno_pubblicazione':  libro.anno_pubblicazione,
             'isbn':                libro.isbn,
             'disponibile':         libro.disponibile,
+            'descrizione':         libro.descrizione,
+            'cover_url':           libro.cover_url,
         }
         for libro in libri  # itera su tutta la QuerySet
     ]

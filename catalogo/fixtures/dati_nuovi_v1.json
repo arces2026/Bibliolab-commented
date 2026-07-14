@@ -1,0 +1,738 @@
+[
+  {
+    "model": "catalogo.autore",
+    "pk": 1,
+    "fields": {
+      "nome": "Umberto",
+      "cognome": "Eco",
+      "data_nascita": "1932-01-05",
+      "biografia": "Semiologo, filosofo e romanziere italiano."
+    }
+  },
+  {
+    "model": "catalogo.autore",
+    "pk": 2,
+    "fields": {
+      "nome": "Italo",
+      "cognome": "Calvino",
+      "data_nascita": "1923-10-15",
+      "biografia": "Narratore e saggista tra i piu importanti del Novecento."
+    }
+  },
+  {
+    "model": "catalogo.autore",
+    "pk": 3,
+    "fields": {
+      "nome": "Elena",
+      "cognome": "Ferrante",
+      "data_nascita": null,
+      "biografia": "Pseudonimo di un autore italiano di cui si ignora l identita."
+    }
+  },
+  {
+    "model": "catalogo.autore",
+    "pk": 4,
+    "fields": {
+      "nome": "Alessandro",
+      "cognome": "Baricco",
+      "data_nascita": "1958-01-25",
+      "biografia": "Scrittore, saggista e conduttore televisivo torinese."
+    }
+  },
+  {
+    "model": "catalogo.autore",
+    "pk": 5,
+    "fields": {
+      "nome": "Primo",
+      "cognome": "Levi",
+      "data_nascita": "1919-07-31",
+      "biografia": "Chimico e scrittore, testimone della Shoah e autore di 'Se questo è un uomo'."
+    }
+  },
+  {
+    "model": "catalogo.autore",
+    "pk": 6,
+    "fields": {
+      "nome": "Luigi",
+      "cognome": "Pirandello",
+      "data_nascita": "1867-06-28",
+      "biografia": "Drammaturgo, romanziere e poeta, premio Nobel per la letteratura nel 1934."
+    }
+  },
+  {
+    "model": "catalogo.autore",
+    "pk": 7,
+    "fields": {
+      "nome": "Cesare",
+      "cognome": "Pavese",
+      "data_nascita": "1908-09-09",
+      "biografia": "Scrittore e poeta tra i più influenti del Novecento italiano."
+    }
+  },
+  {
+    "model": "catalogo.autore",
+    "pk": 8,
+    "fields": {
+      "nome": "Elsa",
+      "cognome": "Morante",
+      "data_nascita": "1912-08-18",
+      "biografia": "Scrittrice, poetessa e traduttrice, autrice de 'La storia'."
+    }
+  },
+  {
+    "model": "catalogo.autore",
+    "pk": 9,
+    "fields": {
+      "nome": "Alberto",
+      "cognome": "Moravia",
+      "data_nascita": "1907-11-28",
+      "biografia": "Giornalista e scrittore, autore di 'Gli indifferenti'."
+    }
+  },
+  {
+    "model": "catalogo.autore",
+    "pk": 10,
+    "fields": {
+      "nome": "Natalia",
+      "cognome": "Ginzburg",
+      "data_nascita": "1916-07-14",
+      "biografia": "Scrittrice e saggista, autrice di 'Lessico famigliare'."
+    }
+  },
+  {
+    "model": "catalogo.autore",
+    "pk": 11,
+    "fields": {
+      "nome": "Giacomo",
+      "cognome": "Leopardi",
+      "data_nascita": "1798-06-29",
+      "biografia": "Poeta, filosofo e filologo, massimo esponente del Romanticismo italiano."
+    }
+  },
+  {
+    "model": "catalogo.autore",
+    "pk": 12,
+    "fields": {
+      "nome": "Giovanni",
+      "cognome": "Boccaccio",
+      "data_nascita": "1313-06-16",
+      "biografia": "Scrittore e poeta, autore del 'Decameron'."
+    }
+  },
+  {
+    "model": "catalogo.autore",
+    "pk": 13,
+    "fields": {
+      "nome": "Dante",
+      "cognome": "Alighieri",
+      "data_nascita": "1265-05-01",
+      "biografia": "Poeta, scrittore e politico, padre della lingua italiana e autore della 'Divina Commedia'."
+    }
+  },
+  {
+    "model": "catalogo.autore",
+    "pk": 14,
+    "fields": {
+      "nome": "Pier Paolo",
+      "cognome": "Pasolini",
+      "data_nascita": "1922-03-05",
+      "biografia": "Poeta, scrittore, regista e intellettuale poliedrico."
+    }
+  },
+  {
+    "model": "catalogo.categoria",
+    "pk": 1,
+    "fields": {
+      "nome": "Romanzo",
+      "descrizione": "Narrativa di finzione di lungo respiro."
+    }
+  },
+  {
+    "model": "catalogo.categoria",
+    "pk": 2,
+    "fields": {
+      "nome": "Saggio",
+      "descrizione": "Opere di riflessione e analisi non fiction."
+    }
+  },
+  {
+    "model": "catalogo.categoria",
+    "pk": 3,
+    "fields": {
+      "nome": "Racconti",
+      "descrizione": "Raccolta di storie brevi."
+    }
+  },
+  {
+    "model": "catalogo.categoria",
+    "pk": 4,
+    "fields": {
+      "nome": "Classico",
+      "descrizione": "Opere di riconosciuto valore letterario."
+    }
+  },
+  {
+    "model": "catalogo.categoria",
+    "pk": 5,
+    "fields": {
+      "nome": "Contemporaneo",
+      "descrizione": "Letteratura pubblicata dal 2000 in poi."
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 1,
+    "fields": {
+      "titolo": "Il nome della rosa",
+      "autore": 1,
+      "categorie": [1, 4],
+      "anno_pubblicazione": 1980,
+      "isbn": "9788845292613",
+      "descrizione": "Un monaco medievale indaga su misteriose morti in un abbazia.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788845292613&printsec=frontcover&img=1&zoom=1",
+      "disponibile": true,
+      "data_aggiunta": "2024-01-10T09:00:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 2,
+    "fields": {
+      "titolo": "Il pendolo di Foucault",
+      "autore": 1,
+      "categorie": [1],
+      "anno_pubblicazione": 1988,
+      "isbn": "9788845293481",
+      "descrizione": "Tre redattori inventano per gioco una teoria cospiratoria che prende vita.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788845293481&printsec=frontcover&img=1&zoom=1",
+      "disponibile": true,
+      "data_aggiunta": "2024-01-10T09:05:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 3,
+    "fields": {
+      "titolo": "Se una notte d inverno un viaggiatore",
+      "autore": 2,
+      "categorie": [1, 4],
+      "anno_pubblicazione": 1979,
+      "isbn": "9788806226657",
+      "descrizione": "Un romanzo sperimentale che mette il lettore come protagonista.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788806226657&printsec=frontcover&img=1&zoom=1",
+      "disponibile": true,
+      "data_aggiunta": "2024-01-11T09:00:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 4,
+    "fields": {
+      "titolo": "Le cosmicomiche",
+      "autore": 2,
+      "categorie": [3, 4],
+      "anno_pubblicazione": 1965,
+      "isbn": "9788806226664",
+      "descrizione": "Dodici racconti fantastici narrati da un essere cosmico.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788806226664&printsec=frontcover&img=1&zoom=1",
+      "disponibile": false,
+      "data_aggiunta": "2024-01-11T09:10:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 5,
+    "fields": {
+      "titolo": "L amica geniale",
+      "autore": 3,
+      "categorie": [1, 5],
+      "anno_pubblicazione": 2011,
+      "isbn": "9788866321668",
+      "descrizione": "Primo volume della tetralogia napoletana.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788866321668&printsec=frontcover&img=1&zoom=1",
+      "disponibile": true,
+      "data_aggiunta": "2024-01-12T09:00:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 6,
+    "fields": {
+      "titolo": "Storia del nuovo cognome",
+      "autore": 3,
+      "categorie": [1, 5],
+      "anno_pubblicazione": 2012,
+      "isbn": "9788866321675",
+      "descrizione": "Secondo volume della tetralogia napoletana.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788866321675&printsec=frontcover&img=1&zoom=1",
+      "disponibile": true,
+      "data_aggiunta": "2024-01-12T09:05:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 7,
+    "fields": {
+      "titolo": "Novecento",
+      "autore": 4,
+      "categorie": [1, 4],
+      "anno_pubblicazione": 1994,
+      "isbn": "9788807816710",
+      "descrizione": "Monologo di un pianista che non ha mai lasciato la nave su cui e nato.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788807816710&printsec=frontcover&img=1&zoom=1",
+      "disponibile": true,
+      "data_aggiunta": "2024-01-13T09:00:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 8,
+    "fields": {
+      "titolo": "Oceano mare",
+      "autore": 4,
+      "categorie": [1],
+      "anno_pubblicazione": 1993,
+      "isbn": "9788807816727",
+      "descrizione": "Un albergo di fronte al mare ospita personaggi in fuga dal loro passato.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788807816727&printsec=frontcover&img=1&zoom=1",
+      "disponibile": false,
+      "data_aggiunta": "2024-01-13T09:05:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 100,
+    "fields": {
+      "titolo": "Se questo è un uomo",
+      "autore": 5,
+      "categorie": [1, 3],
+      "anno_pubblicazione": 1947,
+      "isbn": "9788806175708",
+      "descrizione": "Testimonianza autobiografica dell'esperienza nei lager nazisti.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788806175708&printsec=frontcover&img=1&zoom=1",
+      "disponibile": true,
+      "data_aggiunta": "2024-01-13T09:05:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 101,
+    "fields": {
+      "titolo": "La tregua",
+      "autore": 5,
+      "categorie": [1, 3],
+      "anno_pubblicazione": 1963,
+      "isbn": "9788806175715",
+      "descrizione": "Seguito di 'Se questo è un uomo', il lungo viaggio di ritorno dopo la liberazione.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788806175715&printsec=frontcover&img=1&zoom=1",
+      "disponibile": true,
+      "data_aggiunta": "2024-01-13T09:10:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 102,
+    "fields": {
+      "titolo": "Il sistema periodico",
+      "autore": 5,
+      "categorie": [1, 2],
+      "anno_pubblicazione": 1975,
+      "isbn": "9788806175722",
+      "descrizione": "Raccolta di racconti ispirati agli elementi chimici e alla vita dell'autore.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788806175722&printsec=frontcover&img=1&zoom=1",
+      "disponibile": false,
+      "data_aggiunta": "2024-01-13T09:15:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 103,
+    "fields": {
+      "titolo": "Il fu Mattia Pascal",
+      "autore": 6,
+      "categorie": [1],
+      "anno_pubblicazione": 1904,
+      "isbn": "9788806180450",
+      "descrizione": "Un uomo che crede di essere morto e assume una nuova identità.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788806180450&printsec=frontcover&img=1&zoom=1",
+      "disponibile": true,
+      "data_aggiunta": "2024-01-13T09:20:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 104,
+    "fields": {
+      "titolo": "Uno, nessuno e centomila",
+      "autore": 6,
+      "categorie": [1],
+      "anno_pubblicazione": 1926,
+      "isbn": "9788806180467",
+      "descrizione": "La crisi identitaria di Vitangelo Moscarda.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788806180467&printsec=frontcover&img=1&zoom=1",
+      "disponibile": false,
+      "data_aggiunta": "2024-01-13T09:25:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 105,
+    "fields": {
+      "titolo": "Novelle per un anno",
+      "autore": 6,
+      "categorie": [1, 4],
+      "anno_pubblicazione": 1922,
+      "isbn": "9788806180474",
+      "descrizione": "Raccolta di novelle che esplorano la condizione umana.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788806180474&printsec=frontcover&img=1&zoom=1",
+      "disponibile": true,
+      "data_aggiunta": "2024-01-13T09:30:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 106,
+    "fields": {
+      "titolo": "La luna e i falò",
+      "autore": 7,
+      "categorie": [1],
+      "anno_pubblicazione": 1950,
+      "isbn": "9788806180504",
+      "descrizione": "Il ritorno di un partigiano nelle Langhe tra memoria e rimpianto.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788806180504&printsec=frontcover&img=1&zoom=1",
+      "disponibile": true,
+      "data_aggiunta": "2024-01-13T09:35:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 107,
+    "fields": {
+      "titolo": "Il mestiere di vivere",
+      "autore": 7,
+      "categorie": [1, 5],
+      "anno_pubblicazione": 1952,
+      "isbn": "9788806180511",
+      "descrizione": "Diario intimo e riflessioni sulla vita e sulla scrittura.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788806180511&printsec=frontcover&img=1&zoom=1",
+      "disponibile": false,
+      "data_aggiunta": "2024-01-13T09:40:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 108,
+    "fields": {
+      "titolo": "Dialoghi con Leucò",
+      "autore": 7,
+      "categorie": [1, 2],
+      "anno_pubblicazione": 1947,
+      "isbn": "9788806180528",
+      "descrizione": "Riscrittura in chiave moderna dei miti classici.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788806180528&printsec=frontcover&img=1&zoom=1",
+      "disponibile": true,
+      "data_aggiunta": "2024-01-13T09:45:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 109,
+    "fields": {
+      "titolo": "La storia",
+      "autore": 8,
+      "categorie": [1, 3],
+      "anno_pubblicazione": 1974,
+      "isbn": "9788806180559",
+      "descrizione": "Le vicende di una famiglia romana durante la Seconda Guerra Mondiale.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788806180559&printsec=frontcover&img=1&zoom=1",
+      "disponibile": true,
+      "data_aggiunta": "2024-01-13T09:50:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 110,
+    "fields": {
+      "titolo": "L'isola di Arturo",
+      "autore": 8,
+      "categorie": [1],
+      "anno_pubblicazione": 1957,
+      "isbn": "9788806180566",
+      "descrizione": "Un ragazzo cresce in un'isola prigione tra sogni e solitudine.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788806180566&printsec=frontcover&img=1&zoom=1",
+      "disponibile": false,
+      "data_aggiunta": "2024-01-13T09:55:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 111,
+    "fields": {
+      "titolo": "Menzogna e sortilegio",
+      "autore": 8,
+      "categorie": [1],
+      "anno_pubblicazione": 1948,
+      "isbn": "9788806180573",
+      "descrizione": "Romanzo d'esordio sulla vita di una famiglia dell'Italia meridionale.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788806180573&printsec=frontcover&img=1&zoom=1",
+      "disponibile": true,
+      "data_aggiunta": "2024-01-13T10:00:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 112,
+    "fields": {
+      "titolo": "Gli indifferenti",
+      "autore": 9,
+      "categorie": [1],
+      "anno_pubblicazione": 1929,
+      "isbn": "9788806180603",
+      "descrizione": "Ritratto impietoso della borghesia romana degli anni Venti.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788806180603&printsec=frontcover&img=1&zoom=1",
+      "disponibile": true,
+      "data_aggiunta": "2024-01-13T10:05:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 113,
+    "fields": {
+      "titolo": "Il conformista",
+      "autore": 9,
+      "categorie": [1, 3],
+      "anno_pubblicazione": 1951,
+      "isbn": "9788806180610",
+      "descrizione": "Un uomo che si piega al regime fascista e compie un omicidio politico.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788806180610&printsec=frontcover&img=1&zoom=1",
+      "disponibile": false,
+      "data_aggiunta": "2024-01-13T10:10:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 114,
+    "fields": {
+      "titolo": "La ciociara",
+      "autore": 9,
+      "categorie": [1, 3],
+      "anno_pubblicazione": 1957,
+      "isbn": "9788806180627",
+      "descrizione": "Una madre e una figlia in fuga durante l'occupazione tedesca.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788806180627&printsec=frontcover&img=1&zoom=1",
+      "disponibile": true,
+      "data_aggiunta": "2024-01-13T10:15:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 115,
+    "fields": {
+      "titolo": "Lessico famigliare",
+      "autore": 10,
+      "categorie": [1, 5],
+      "anno_pubblicazione": 1963,
+      "isbn": "9788806180658",
+      "descrizione": "Memorie familiari attraverso il linguaggio e i ricordi personali.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788806180658&printsec=frontcover&img=1&zoom=1",
+      "disponibile": true,
+      "data_aggiunta": "2024-01-13T10:20:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 116,
+    "fields": {
+      "titolo": "Tutti i nostri ieri",
+      "autore": 10,
+      "categorie": [1, 3],
+      "anno_pubblicazione": 1952,
+      "isbn": "9788806180665",
+      "descrizione": "Le vicende di due famiglie torinesi durante la guerra.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788806180665&printsec=frontcover&img=1&zoom=1",
+      "disponibile": false,
+      "data_aggiunta": "2024-01-13T10:25:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 117,
+    "fields": {
+      "titolo": "Le voci della sera",
+      "autore": 10,
+      "categorie": [1],
+      "anno_pubblicazione": 1961,
+      "isbn": "9788806180672",
+      "descrizione": "La vita in un paesino del Piemonte raccontata da una ragazza.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788806180672&printsec=frontcover&img=1&zoom=1",
+      "disponibile": true,
+      "data_aggiunta": "2024-01-13T10:30:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 118,
+    "fields": {
+      "titolo": "Canti",
+      "autore": 11,
+      "categorie": [2],
+      "anno_pubblicazione": 1835,
+      "isbn": "9788806180702",
+      "descrizione": "Raccolta di poesie che esprimono il pessimismo cosmico e la ricerca della verità.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788806180702&printsec=frontcover&img=1&zoom=1",
+      "disponibile": true,
+      "data_aggiunta": "2024-01-13T10:35:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 119,
+    "fields": {
+      "titolo": "Operette morali",
+      "autore": 11,
+      "categorie": [2, 5],
+      "anno_pubblicazione": 1827,
+      "isbn": "9788806180719",
+      "descrizione": "Dialoghi filosofici e satirici sull'infelicità umana.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788806180719&printsec=frontcover&img=1&zoom=1",
+      "disponibile": false,
+      "data_aggiunta": "2024-01-13T10:40:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 120,
+    "fields": {
+      "titolo": "Zibaldone",
+      "autore": 11,
+      "categorie": [5, 2],
+      "anno_pubblicazione": 1898,
+      "isbn": "9788806180726",
+      "descrizione": "Opera monumentale di pensieri, riflessioni e appunti filosofici.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788806180726&printsec=frontcover&img=1&zoom=1",
+      "disponibile": true,
+      "data_aggiunta": "2024-01-13T10:45:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 121,
+    "fields": {
+      "titolo": "Decameron",
+      "autore": 12,
+      "categorie": [1, 4],
+      "anno_pubblicazione": 1353,
+      "isbn": "9788806180757",
+      "descrizione": "Cento novelle raccontate da dieci giovani in fuga dalla peste a Firenze.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788806180757&printsec=frontcover&img=1&zoom=1",
+      "disponibile": true,
+      "data_aggiunta": "2024-01-13T10:50:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 122,
+    "fields": {
+      "titolo": "Filostrato",
+      "autore": 12,
+      "categorie": [2],
+      "anno_pubblicazione": 1335,
+      "isbn": "9788806180764",
+      "descrizione": "Poema in ottave che narra l'amore tragico di Troilo e Criseida.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788806180764&printsec=frontcover&img=1&zoom=1",
+      "disponibile": false,
+      "data_aggiunta": "2024-01-13T10:55:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 123,
+    "fields": {
+      "titolo": "Ninfale fiesolano",
+      "autore": 12,
+      "categorie": [2],
+      "anno_pubblicazione": 1345,
+      "isbn": "9788806180771",
+      "descrizione": "Poemetto idillico sulle origini di Fiesole e dell'amore di Africo e Mensola.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788806180771&printsec=frontcover&img=1&zoom=1",
+      "disponibile": true,
+      "data_aggiunta": "2024-01-13T11:00:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 124,
+    "fields": {
+      "titolo": "La Divina Commedia",
+      "autore": 13,
+      "categorie": [2],
+      "anno_pubblicazione": 1321,
+      "isbn": "9788806180801",
+      "descrizione": "Il capolavoro della letteratura italiana, viaggio nell'Inferno, Purgatorio e Paradiso.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788806180801&printsec=frontcover&img=1&zoom=1",
+      "disponibile": true,
+      "data_aggiunta": "2024-01-13T11:05:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 125,
+    "fields": {
+      "titolo": "Vita Nuova",
+      "autore": 13,
+      "categorie": [2],
+      "anno_pubblicazione": 1295,
+      "isbn": "9788806180818",
+      "descrizione": "Prosimetro che narra l'amore per Beatrice e la sua idealizzazione.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788806180818&printsec=frontcover&img=1&zoom=1",
+      "disponibile": false,
+      "data_aggiunta": "2024-01-13T11:10:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 126,
+    "fields": {
+      "titolo": "Il Convivio",
+      "autore": 13,
+      "categorie": [5, 2],
+      "anno_pubblicazione": 1307,
+      "isbn": "9788806180825",
+      "descrizione": "Trattato filosofico in volgare che commenta alcune delle canzoni dell'autore.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788806180825&printsec=frontcover&img=1&zoom=1",
+      "disponibile": true,
+      "data_aggiunta": "2024-01-13T11:15:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 127,
+    "fields": {
+      "titolo": "Ragazzi di vita",
+      "autore": 14,
+      "categorie": [1],
+      "anno_pubblicazione": 1955,
+      "isbn": "9788806180856",
+      "descrizione": "La vita dei ragazzi di borgata nella Roma del dopoguerra.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788806180856&printsec=frontcover&img=1&zoom=1",
+      "disponibile": true,
+      "data_aggiunta": "2024-01-13T11:20:00Z"
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 128,
+    "fields": {
+      "titolo": "Una vita violenta",
+      "autore": 14,
+      "categorie": [1],
+      "anno_pubblicazione": 1959,
+      "isbn": "9788806180863",
+      "descrizione": "La parabola esistenziale di un giovane tra criminalità e redenzione.",
+      "cover_url": "https://books.google.com/books?vid=ISBN9788806180863&printsec=frontcover&img=1&zoom=1",
+      "disponibile": false,
+      "data_aggiunta": "2024-01-13T11:25:00Z"
+    }
+  }
+]
+   

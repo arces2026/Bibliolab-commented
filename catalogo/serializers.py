@@ -61,7 +61,8 @@ class LibroSerializer(serializers.ModelSerializer):
             'autore_nome',    # stringa calcolata "Eco, Umberto" (read-only)
             'autore_oggetto', # oggetto autore annidato (read-only)
             'categorie',      # lista di oggetti categoria (read-only)
-            'anno_pubblicazione', 'isbn', 'disponibile', 'data_aggiunta'
+            'anno_pubblicazione', 'isbn', 'disponibile', 'data_aggiunta', 'cover_url',
+            'descrizione',
         ]
         # read_only_fields: campi che non possono essere impostati dall utente tramite API.
         # data_aggiunta e auto_now_add — non ha senso permettere di modificarlo.

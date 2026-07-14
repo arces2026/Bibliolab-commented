@@ -146,6 +146,9 @@ class Libro(models.Model):
     # BooleanField: colonna BOOLEAN nel database (True/False).
     # default=True: i nuovi libri sono disponibili per default.
     disponibile = models.BooleanField(default=True, verbose_name='Disponibile')
+    
+    # Aggiungo field per le cover
+    cover_url = models.URLField(max_length=300, default='immagini/libro_default.png')
 
     # DateTimeField con auto_now_add=True: viene impostato automaticamente
     # alla data e ora ATTUALI quando il record viene creato.
