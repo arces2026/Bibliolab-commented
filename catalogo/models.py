@@ -134,7 +134,7 @@ class Libro(models.Model):
     # blank=True: l ISBN e opzionale (alcuni libri non ce l hanno).
     isbn = models.CharField(
         max_length=13,
-        unique=True,
+        unique=False,
         blank=True,
         verbose_name='ISBN',
         help_text='Codice ISBN a 13 cifre (opzionale)'  # testo di aiuto nel form
