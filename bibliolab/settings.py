@@ -86,7 +86,7 @@ INSTALLED_APPS = [
     "rest_framework",  # Django REST Framework per le API JSON
     # Nostre app:
     "catalogo",  # app principale di BiblioLab
-    'accounts', # just to create api endpoints for vue login and auth
+    
 ]
 
 # ── MIDDLEWARE ────────────────────────────────────────────────────────────────
