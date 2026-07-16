@@ -1,0 +1,1129 @@
+[
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 3,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 3,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 3,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 3,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 2,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 2,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 2,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 2,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 4,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 5,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 6,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add Autore",
+      "content_type": 7,
+      "codename": "add_autore"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change Autore",
+      "content_type": 7,
+      "codename": "change_autore"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete Autore",
+      "content_type": 7,
+      "codename": "delete_autore"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view Autore",
+      "content_type": 7,
+      "codename": "view_autore"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add Categoria",
+      "content_type": 8,
+      "codename": "add_categoria"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change Categoria",
+      "content_type": 8,
+      "codename": "change_categoria"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete Categoria",
+      "content_type": 8,
+      "codename": "delete_categoria"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view Categoria",
+      "content_type": 8,
+      "codename": "view_categoria"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add Libro",
+      "content_type": 9,
+      "codename": "add_libro"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change Libro",
+      "content_type": 9,
+      "codename": "change_libro"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete Libro",
+      "content_type": 9,
+      "codename": "delete_libro"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view Libro",
+      "content_type": 9,
+      "codename": "view_libro"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$1200000$PElqhs29EARZ5CWYVVvhWO$w9/S6d8CWiLxV4aKBJdqfgWPVx+A2HDRdhNdxAZgrb0=",
+      "last_login": "2026-07-16T09:44:33.580Z",
+      "is_superuser": true,
+      "username": "marco",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2026-07-16T09:44:26.106Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": { "app_label": "admin", "model": "logentry" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": { "app_label": "auth", "model": "group" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": { "app_label": "auth", "model": "permission" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": { "app_label": "auth", "model": "user" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": { "app_label": "contenttypes", "model": "contenttype" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": { "app_label": "sessions", "model": "session" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": { "app_label": "catalogo", "model": "autore" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": { "app_label": "catalogo", "model": "categoria" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": { "app_label": "catalogo", "model": "libro" }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "e85guanai5jd1u5zdchy4lkzrkxyxryn",
+    "fields": {
+      "session_data": ".eJxVjMsKwjAQAP9lzxLIs0mP3v2GsN3dmKqk0LQn8d-l0INeZ4Z5Q8Z9q3nvsuaZYQQNl182IT2lHYIf2O6LoqVt6zypI1Gn7eq2sLyuZ_s3qNgrjEDGifMx-oLFJg5SzGCkeIvGRbGBTRq0tpqIdRIRF72EFDyVJLpQgM8X5vc4KA:1wkIdt:OZdGbhxWTocrn3uQBlpONoEnYgI-FdJSybCnvUZEquQ",
+      "expire_date": "2026-07-30T09:44:33.590Z"
+    }
+  },
+  {
+    "model": "catalogo.autore",
+    "pk": 1,
+    "fields": {
+      "nome": "Umberto",
+      "cognome": "Eco",
+      "data_nascita": "1932-01-05",
+      "biografia": "Semiologo, filosofo e romanziere italiano."
+    }
+  },
+  {
+    "model": "catalogo.autore",
+    "pk": 2,
+    "fields": {
+      "nome": "Italo",
+      "cognome": "Calvino",
+      "data_nascita": "1923-10-15",
+      "biografia": "Narratore e saggista tra i piu importanti del Novecento."
+    }
+  },
+  {
+    "model": "catalogo.autore",
+    "pk": 3,
+    "fields": {
+      "nome": "Elena",
+      "cognome": "Ferrante",
+      "data_nascita": null,
+      "biografia": "Pseudonimo di un autore italiano di cui si ignora l identita."
+    }
+  },
+  {
+    "model": "catalogo.autore",
+    "pk": 4,
+    "fields": {
+      "nome": "Alessandro",
+      "cognome": "Baricco",
+      "data_nascita": "1958-01-25",
+      "biografia": "Scrittore, saggista e conduttore televisivo torinese."
+    }
+  },
+  {
+    "model": "catalogo.autore",
+    "pk": 5,
+    "fields": {
+      "nome": "Primo",
+      "cognome": "Levi",
+      "data_nascita": "1919-07-31",
+      "biografia": "Chimico e scrittore, testimone della Shoah e autore di 'Se questo � un uomo'."
+    }
+  },
+  {
+    "model": "catalogo.autore",
+    "pk": 6,
+    "fields": {
+      "nome": "Luigi",
+      "cognome": "Pirandello",
+      "data_nascita": "1867-06-28",
+      "biografia": "Drammaturgo, romanziere e poeta, premio Nobel per la letteratura nel 1934."
+    }
+  },
+  {
+    "model": "catalogo.autore",
+    "pk": 7,
+    "fields": {
+      "nome": "Cesare",
+      "cognome": "Pavese",
+      "data_nascita": "1908-09-09",
+      "biografia": "Scrittore e poeta tra i pi� influenti del Novecento italiano."
+    }
+  },
+  {
+    "model": "catalogo.autore",
+    "pk": 8,
+    "fields": {
+      "nome": "Elsa",
+      "cognome": "Morante",
+      "data_nascita": "1912-08-18",
+      "biografia": "Scrittrice, poetessa e traduttrice, autrice de 'La storia'."
+    }
+  },
+  {
+    "model": "catalogo.autore",
+    "pk": 9,
+    "fields": {
+      "nome": "Alberto",
+      "cognome": "Moravia",
+      "data_nascita": "1907-11-28",
+      "biografia": "Giornalista e scrittore, autore di 'Gli indifferenti'."
+    }
+  },
+  {
+    "model": "catalogo.autore",
+    "pk": 10,
+    "fields": {
+      "nome": "Natalia",
+      "cognome": "Ginzburg",
+      "data_nascita": "1916-07-14",
+      "biografia": "Scrittrice e saggista, autrice di 'Lessico famigliare'."
+    }
+  },
+  {
+    "model": "catalogo.autore",
+    "pk": 11,
+    "fields": {
+      "nome": "Giacomo",
+      "cognome": "Leopardi",
+      "data_nascita": "1798-06-29",
+      "biografia": "Poeta, filosofo e filologo, massimo esponente del Romanticismo italiano."
+    }
+  },
+  {
+    "model": "catalogo.autore",
+    "pk": 12,
+    "fields": {
+      "nome": "Giovanni",
+      "cognome": "Boccaccio",
+      "data_nascita": "1313-06-16",
+      "biografia": "Scrittore e poeta, autore del 'Decameron'."
+    }
+  },
+  {
+    "model": "catalogo.autore",
+    "pk": 13,
+    "fields": {
+      "nome": "Dante",
+      "cognome": "Alighieri",
+      "data_nascita": "1265-05-01",
+      "biografia": "Poeta, scrittore e politico, padre della lingua italiana e autore della 'Divina Commedia'."
+    }
+  },
+  {
+    "model": "catalogo.autore",
+    "pk": 14,
+    "fields": {
+      "nome": "Pier Paolo",
+      "cognome": "Pasolini",
+      "data_nascita": "1922-03-05",
+      "biografia": "Poeta, scrittore, regista e intellettuale poliedrico."
+    }
+  },
+  {
+    "model": "catalogo.categoria",
+    "pk": 1,
+    "fields": {
+      "nome": "Romanzo",
+      "descrizione": "Narrativa di finzione di lungo respiro."
+    }
+  },
+  {
+    "model": "catalogo.categoria",
+    "pk": 2,
+    "fields": {
+      "nome": "Saggio",
+      "descrizione": "Opere di riflessione e analisi non fiction."
+    }
+  },
+  {
+    "model": "catalogo.categoria",
+    "pk": 3,
+    "fields": { "nome": "Racconti", "descrizione": "Raccolta di storie brevi." }
+  },
+  {
+    "model": "catalogo.categoria",
+    "pk": 4,
+    "fields": {
+      "nome": "Classico",
+      "descrizione": "Opere di riconosciuto valore letterario."
+    }
+  },
+  {
+    "model": "catalogo.categoria",
+    "pk": 5,
+    "fields": {
+      "nome": "Contemporaneo",
+      "descrizione": "Letteratura pubblicata dal 2000 in poi."
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 1,
+    "fields": {
+      "titolo": "Il nome della rosa",
+      "autore": 1,
+      "anno_pubblicazione": 1980,
+      "isbn": "9788845296833",
+      "descrizione": "Un monaco medievale indaga su misteriose morti in un abbazia.",
+      "disponibile": true,
+      "cover_url": "https://covers.openlibrary.org/b/isbn/9788845296833-L.jpg",
+      "data_aggiunta": "2024-01-10T09:00:00Z",
+      "categorie": [4, 1]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 2,
+    "fields": {
+      "titolo": "Il pendolo di Foucault",
+      "autore": 1,
+      "anno_pubblicazione": 1988,
+      "isbn": "9788845278662",
+      "descrizione": "Tre redattori inventano per gioco una teoria cospiratoria che prende vita.",
+      "disponibile": true,
+      "cover_url": "https://covers.openlibrary.org/b/isbn/9788845278662-L.jpg",
+      "data_aggiunta": "2024-01-10T09:05:00Z",
+      "categorie": [1]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 3,
+    "fields": {
+      "titolo": "Se una notte d inverno un viaggiatore",
+      "autore": 2,
+      "anno_pubblicazione": 1979,
+      "isbn": "9788804772149",
+      "descrizione": "Un romanzo sperimentale che mette il lettore come protagonista.",
+      "disponibile": true,
+      "cover_url": "https://books.google.com/books?vid=ISBN9788804772149&printsec=frontcover&img=1&zoom=1",
+      "data_aggiunta": "2024-01-11T09:00:00Z",
+      "categorie": [4, 1]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 4,
+    "fields": {
+      "titolo": "Le cosmicomiche",
+      "autore": 2,
+      "anno_pubblicazione": 1965,
+      "isbn": "9788419942388",
+      "descrizione": "Dodici racconti fantastici narrati da un essere cosmico.",
+      "disponibile": false,
+      "cover_url": "https://books.google.com/books?vid=ISBN9788419942388&printsec=frontcover&img=1&zoom=1",
+      "data_aggiunta": "2024-01-11T09:10:00Z",
+      "categorie": [4, 3]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 5,
+    "fields": {
+      "titolo": "L amica geniale",
+      "autore": 3,
+      "anno_pubblicazione": 2011,
+      "isbn": "9788866320326",
+      "descrizione": "Primo volume della tetralogia napoletana.",
+      "disponibile": true,
+      "cover_url": "https://covers.openlibrary.org/b/isbn/9788866320326-L.jpg",
+      "data_aggiunta": "2024-01-12T09:00:00Z",
+      "categorie": [5, 1]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 6,
+    "fields": {
+      "titolo": "Storia del nuovo cognome",
+      "autore": 3,
+      "anno_pubblicazione": 2012,
+      "isbn": "9788866321811",
+      "descrizione": "Secondo volume della tetralogia napoletana.",
+      "disponibile": true,
+      "cover_url": "https://covers.openlibrary.org/b/isbn/9788866321811-L.jpg",
+      "data_aggiunta": "2024-01-12T09:05:00Z",
+      "categorie": [5, 1]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 7,
+    "fields": {
+      "titolo": "Novecento",
+      "autore": 4,
+      "anno_pubblicazione": 1994,
+      "isbn": "9788807813023",
+      "descrizione": "Monologo di un pianista che non ha mai lasciato la nave su cui e nato.",
+      "disponibile": true,
+      "cover_url": "https://covers.openlibrary.org/b/isbn/9788807813023-L.jpg",
+      "data_aggiunta": "2024-01-13T09:00:00Z",
+      "categorie": [4, 1]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 8,
+    "fields": {
+      "titolo": "Oceano mare",
+      "autore": 4,
+      "anno_pubblicazione": 1993,
+      "isbn": "9788807883026",
+      "descrizione": "Un albergo di fronte al mare ospita personaggi in fuga dal loro passato.",
+      "disponibile": false,
+      "cover_url": "https://covers.openlibrary.org/b/isbn/9788807883026-L.jpg",
+      "data_aggiunta": "2024-01-13T09:05:00Z",
+      "categorie": [1]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 100,
+    "fields": {
+      "titolo": "Se questo � un uomo",
+      "autore": 5,
+      "anno_pubblicazione": 1947,
+      "isbn": "9788806219352",
+      "descrizione": "Testimonianza autobiografica dell'esperienza nei lager nazisti.",
+      "disponibile": true,
+      "cover_url": "https://covers.openlibrary.org/b/isbn/9788806219352-L.jpg",
+      "data_aggiunta": "2024-01-13T09:05:00Z",
+      "categorie": [3, 1]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 101,
+    "fields": {
+      "titolo": "La tregua",
+      "autore": 5,
+      "anno_pubblicazione": 1963,
+      "isbn": "9788806219338",
+      "descrizione": "Seguito di 'Se questo � un uomo', il lungo viaggio di ritorno dopo la liberazione.",
+      "disponibile": true,
+      "cover_url": "https://covers.openlibrary.org/b/isbn/9788806219338-L.jpg",
+      "data_aggiunta": "2024-01-13T09:10:00Z",
+      "categorie": [3, 1]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 102,
+    "fields": {
+      "titolo": "Il sistema periodico",
+      "autore": 5,
+      "anno_pubblicazione": 1975,
+      "isbn": "9788806219505",
+      "descrizione": "Raccolta di racconti ispirati agli elementi chimici e alla vita dell'autore.",
+      "disponibile": false,
+      "cover_url": "https://covers.openlibrary.org/b/isbn/9788806219505-L.jpg",
+      "data_aggiunta": "2024-01-13T09:15:00Z",
+      "categorie": [1, 2]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 103,
+    "fields": {
+      "titolo": "Il fu Mattia Pascal",
+      "autore": 6,
+      "anno_pubblicazione": 1904,
+      "isbn": "9781806649990",
+      "descrizione": "Un uomo che crede di essere morto e assume una nuova identit�.",
+      "disponibile": true,
+      "cover_url": "https://books.google.com/books?vid=ISBN9781806649990&printsec=frontcover&img=1&zoom=1",
+      "data_aggiunta": "2024-01-13T09:20:00Z",
+      "categorie": [1]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 104,
+    "fields": {
+      "titolo": "Uno, nessuno e centomila",
+      "autore": 6,
+      "anno_pubblicazione": 1926,
+      "isbn": "9788804668008",
+      "descrizione": "La crisi identitaria di Vitangelo Moscarda.",
+      "disponibile": false,
+      "cover_url": "https://covers.openlibrary.org/b/isbn/9788804668008-L.jpg",
+      "data_aggiunta": "2024-01-13T09:25:00Z",
+      "categorie": [1]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 105,
+    "fields": {
+      "titolo": "Novelle per un anno",
+      "autore": 6,
+      "anno_pubblicazione": 1922,
+      "isbn": "9798356171314",
+      "descrizione": "Raccolta di novelle che esplorano la condizione umana.",
+      "disponibile": true,
+      "cover_url": "https://covers.openlibrary.org/b/isbn/9798356171314-L.jpg",
+      "data_aggiunta": "2024-01-13T09:30:00Z",
+      "categorie": [4, 1]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 106,
+    "fields": {
+      "titolo": "La luna e i fal�",
+      "autore": 7,
+      "anno_pubblicazione": 1950,
+      "isbn": "9788811816072",
+      "descrizione": "Il ritorno di un partigiano nelle Langhe tra memoria e rimpianto.",
+      "disponibile": true,
+      "cover_url": "https://books.google.com/books?vid=ISBN9788811816072&printsec=frontcover&img=1&zoom=1",
+      "data_aggiunta": "2024-01-13T09:35:00Z",
+      "categorie": [1]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 107,
+    "fields": {
+      "titolo": "Il mestiere di vivere",
+      "autore": 7,
+      "anno_pubblicazione": 1952,
+      "isbn": "9788863115130",
+      "descrizione": "Diario intimo e riflessioni sulla vita e sulla scrittura.",
+      "disponibile": false,
+      "cover_url": "https://books.google.com/books?vid=ISBN9788863115130&printsec=frontcover&img=1&zoom=1",
+      "data_aggiunta": "2024-01-13T09:40:00Z",
+      "categorie": [5, 1]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 108,
+    "fields": {
+      "titolo": "Dialoghi con Leuc�",
+      "autore": 7,
+      "anno_pubblicazione": 1947,
+      "isbn": "9791280035318",
+      "descrizione": "Riscrittura in chiave moderna dei miti classici.",
+      "disponibile": true,
+      "cover_url": "https://books.google.com/books?vid=ISBN9791280035318&printsec=frontcover&img=1&zoom=1",
+      "data_aggiunta": "2024-01-13T09:45:00Z",
+      "categorie": [1, 2]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 109,
+    "fields": {
+      "titolo": "La storia",
+      "autore": 8,
+      "anno_pubblicazione": 1974,
+      "isbn": "9782390801962",
+      "descrizione": "Le vicende di una famiglia romana durante la Seconda Guerra Mondiale.",
+      "disponibile": true,
+      "cover_url": "https://books.google.com/books?vid=ISBN9782390801962&printsec=frontcover&img=1&zoom=1",
+      "data_aggiunta": "2024-01-13T09:50:00Z",
+      "categorie": [3, 1]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 110,
+    "fields": {
+      "titolo": "L'isola di Arturo",
+      "autore": 8,
+      "anno_pubblicazione": 1957,
+      "isbn": "9788806222642",
+      "descrizione": "Un ragazzo cresce in un'isola prigione tra sogni e solitudine.",
+      "disponibile": false,
+      "cover_url": "https://covers.openlibrary.org/b/isbn/9788806222642-L.jpg",
+      "data_aggiunta": "2024-01-13T09:55:00Z",
+      "categorie": [1]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 111,
+    "fields": {
+      "titolo": "Menzogna e sortilegio",
+      "autore": 8,
+      "anno_pubblicazione": 1948,
+      "isbn": "9788860873491",
+      "descrizione": "Romanzo d'esordio sulla vita di una famiglia dell'Italia meridionale.",
+      "disponibile": true,
+      "cover_url": "https://books.google.com/books?vid=ISBN9788860873491&printsec=frontcover&img=1&zoom=1",
+      "data_aggiunta": "2024-01-13T10:00:00Z",
+      "categorie": [1]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 112,
+    "fields": {
+      "titolo": "Gli indifferenti",
+      "autore": 9,
+      "anno_pubblicazione": 1929,
+      "isbn": "9788830102811",
+      "descrizione": "Ritratto impietoso della borghesia romana degli anni Venti.",
+      "disponibile": true,
+      "cover_url": "https://books.google.com/books?vid=ISBN9788830102811&printsec=frontcover&img=1&zoom=1",
+      "data_aggiunta": "2024-01-13T10:05:00Z",
+      "categorie": [1]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 113,
+    "fields": {
+      "titolo": "Il conformista",
+      "autore": 9,
+      "anno_pubblicazione": 1951,
+      "isbn": "9788845207907",
+      "descrizione": "Un uomo che si piega al regime fascista e compie un omicidio politico.",
+      "disponibile": false,
+      "cover_url": "https://books.google.com/books?vid=ISBN9788845207907&printsec=frontcover&img=1&zoom=1",
+      "data_aggiunta": "2024-01-13T10:10:00Z",
+      "categorie": [3, 1]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 114,
+    "fields": {
+      "titolo": "La ciociara",
+      "autore": 9,
+      "anno_pubblicazione": 1957,
+      "isbn": "9788830110267",
+      "descrizione": "Una madre e una figlia in fuga durante l'occupazione tedesca.",
+      "disponibile": true,
+      "cover_url": "https://books.google.com/books?vid=ISBN9788830110267&printsec=frontcover&img=1&zoom=1",
+      "data_aggiunta": "2024-01-13T10:15:00Z",
+      "categorie": [3, 1]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 115,
+    "fields": {
+      "titolo": "Lessico famigliare",
+      "autore": 10,
+      "anno_pubblicazione": 1963,
+      "isbn": "9788806219291",
+      "descrizione": "Memorie familiari attraverso il linguaggio e i ricordi personali.",
+      "disponibile": true,
+      "cover_url": "https://books.google.com/books?vid=ISBN9788806219291&printsec=frontcover&img=1&zoom=1",
+      "data_aggiunta": "2024-01-13T10:20:00Z",
+      "categorie": [5, 1]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 116,
+    "fields": {
+      "titolo": "Tutti i nostri ieri",
+      "autore": 10,
+      "anno_pubblicazione": 1952,
+      "isbn": "9788806187415",
+      "descrizione": "Le vicende di due famiglie torinesi durante la guerra.",
+      "disponibile": false,
+      "cover_url": "https://books.google.com/books?vid=ISBN9788806187415&printsec=frontcover&img=1&zoom=1",
+      "data_aggiunta": "2024-01-13T10:25:00Z",
+      "categorie": [3, 1]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 117,
+    "fields": {
+      "titolo": "Le voci della sera",
+      "autore": 10,
+      "anno_pubblicazione": 1961,
+      "isbn": "9780719008573",
+      "descrizione": "La vita in un paesino del Piemonte raccontata da una ragazza.",
+      "disponibile": true,
+      "cover_url": "https://covers.openlibrary.org/b/isbn/9780719008573-L.jpg",
+      "data_aggiunta": "2024-01-13T10:30:00Z",
+      "categorie": [1]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 118,
+    "fields": {
+      "titolo": "Canti",
+      "autore": 11,
+      "anno_pubblicazione": 1835,
+      "isbn": "9780141193878",
+      "descrizione": "Raccolta di poesie che esprimono il pessimismo cosmico e la ricerca della verit�.",
+      "disponibile": true,
+      "cover_url": "https://covers.openlibrary.org/b/isbn/9780141193878-L.jpg",
+      "data_aggiunta": "2024-01-13T10:35:00Z",
+      "categorie": [2]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 119,
+    "fields": {
+      "titolo": "Operette morali",
+      "autore": 11,
+      "anno_pubblicazione": 1827,
+      "isbn": "9788807901256",
+      "descrizione": "Dialoghi filosofici e satirici sull'infelicit� umana.",
+      "disponibile": false,
+      "cover_url": "https://books.google.com/books?vid=ISBN9788807901256&printsec=frontcover&img=1&zoom=1",
+      "data_aggiunta": "2024-01-13T10:40:00Z",
+      "categorie": [5, 2]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 120,
+    "fields": {
+      "titolo": "Zibaldone",
+      "autore": 11,
+      "anno_pubblicazione": 1898,
+      "isbn": "9781781888643",
+      "descrizione": "Opera monumentale di pensieri, riflessioni e appunti filosofici.",
+      "disponibile": true,
+      "cover_url": "https://books.google.com/books?vid=ISBN9781781888643&printsec=frontcover&img=1&zoom=1",
+      "data_aggiunta": "2024-01-13T10:45:00Z",
+      "categorie": [5, 2]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 121,
+    "fields": {
+      "titolo": "Decameron",
+      "autore": 12,
+      "anno_pubblicazione": 1353,
+      "isbn": "9780140449303",
+      "descrizione": "Cento novelle raccontate da dieci giovani in fuga dalla peste a Firenze.",
+      "disponibile": true,
+      "cover_url": "https://books.google.com/books?vid=ISBN9780140449303&printsec=frontcover&img=1&zoom=1",
+      "data_aggiunta": "2024-01-13T10:50:00Z",
+      "categorie": [4, 1]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 122,
+    "fields": {
+      "titolo": "Filostrato",
+      "autore": 12,
+      "anno_pubblicazione": 1335,
+      "isbn": "9780367111182",
+      "descrizione": "Poema in ottave che narra l'amore tragico di Troilo e Criseida.",
+      "disponibile": false,
+      "cover_url": "https://books.google.com/books?vid=ISBN9780367111182&printsec=frontcover&img=1&zoom=1",
+      "data_aggiunta": "2024-01-13T10:55:00Z",
+      "categorie": [2]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 123,
+    "fields": {
+      "titolo": "Ninfale fiesolano",
+      "autore": 12,
+      "anno_pubblicazione": 1345,
+      "isbn": "9798323509829",
+      "descrizione": "Poemetto idillico sulle origini di Fiesole e dell'amore di Africo e Mensola.",
+      "disponibile": true,
+      "cover_url": "https://books.google.com/books?vid=ISBN9798323509829&printsec=frontcover&img=1&zoom=1",
+      "data_aggiunta": "2024-01-13T11:00:00Z",
+      "categorie": [2]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 124,
+    "fields": {
+      "titolo": "La Divina Commedia",
+      "autore": 13,
+      "anno_pubblicazione": 1321,
+      "isbn": "1520928823",
+      "descrizione": "Il capolavoro della letteratura italiana, viaggio nell'Inferno, Purgatorio e Paradiso.",
+      "disponibile": true,
+      "cover_url": "https://books.google.com/books?vid=ISBN1520928823&printsec=frontcover&img=1&zoom=1",
+      "data_aggiunta": "2024-01-13T11:05:00Z",
+      "categorie": [2]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 125,
+    "fields": {
+      "titolo": "Vita Nuova",
+      "autore": 13,
+      "anno_pubblicazione": 1295,
+      "isbn": "9780199540655",
+      "descrizione": "Prosimetro che narra l'amore per Beatrice e la sua idealizzazione.",
+      "disponibile": false,
+      "cover_url": "https://covers.openlibrary.org/b/isbn/9780199540655-L.jpg",
+      "data_aggiunta": "2024-01-13T11:10:00Z",
+      "categorie": [2]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 126,
+    "fields": {
+      "titolo": "Il Convivio",
+      "autore": 13,
+      "anno_pubblicazione": 1307,
+      "isbn": "9798735043348",
+      "descrizione": "Trattato filosofico in volgare che commenta alcune delle canzoni dell'autore.",
+      "disponibile": true,
+      "cover_url": "https://books.google.com/books?vid=ISBN9798735043348&printsec=frontcover&img=1&zoom=1",
+      "data_aggiunta": "2024-01-13T11:15:00Z",
+      "categorie": [5, 2]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 127,
+    "fields": {
+      "titolo": "Ragazzi di vita",
+      "autore": 14,
+      "anno_pubblicazione": 1955,
+      "isbn": "9788811688358",
+      "descrizione": "La vita dei ragazzi di borgata nella Roma del dopoguerra.",
+      "disponibile": true,
+      "cover_url": "https://covers.openlibrary.org/b/isbn/9788811688358-L.jpg",
+      "data_aggiunta": "2024-01-13T11:20:00Z",
+      "categorie": [1]
+    }
+  },
+  {
+    "model": "catalogo.libro",
+    "pk": 128,
+    "fields": {
+      "titolo": "Una vita violenta",
+      "autore": 14,
+      "anno_pubblicazione": 1959,
+      "isbn": "9782757886663",
+      "descrizione": "La parabola esistenziale di un giovane tra criminalit� e redenzione.",
+      "disponibile": false,
+      "cover_url": "https://covers.openlibrary.org/b/isbn/9782757886663-L.jpg",
+      "data_aggiunta": "2024-01-13T11:25:00Z",
+      "categorie": [1]
+    }
+  }
+]
