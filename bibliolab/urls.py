@@ -18,12 +18,16 @@ urlpatterns = [
     # /accounts/ → URL di autenticazione integrati di Django.
     # include('django.contrib.auth.urls') aggiunge automaticamente:
     # /accounts/login/, /accounts/logout/, /accounts/password_change/, /accounts/password_reset/...
+    # this is for the admin
     path('accounts/', include('django.contrib.auth.urls')),
 
     # / (radice) → delega TUTTI gli altri URL al file catalogo/urls.py.
     # include('catalogo.urls') carica dinamicamente i pattern dell app.
     # Il prefisso '' significa che gli URL dell app iniziano dalla radice del sito.
     path('', include('catalogo.urls')),
+    
+    # accounts urls
+    path('api/vue/auth/', include('accounts.urls')),
 ]
 
 # In sviluppo (DEBUG=True), Django serve i file media caricati dagli utenti.

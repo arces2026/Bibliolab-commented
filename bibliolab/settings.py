@@ -71,6 +71,8 @@ CORS_ALLOW_HEADERS = [
 ]
 
 CORS_PREFLIGHT_MAX_AGE = 86400  # 24 ore
+
+CSRF_TRUSTED_ORIGINS = ["http://localhost:5173", "http://127.0.0.1:5173"] # for csrf token to be safe
 # ── APP INSTALLATE ────────────────────────────────────────────────────────────
 
 INSTALLED_APPS = [
@@ -86,6 +88,7 @@ INSTALLED_APPS = [
     "rest_framework",  # Django REST Framework per le API JSON
     # Nostre app:
     "catalogo",  # app principale di BiblioLab
+    "accounts", # authorization app for frontend frameworks
     
 ]
 
