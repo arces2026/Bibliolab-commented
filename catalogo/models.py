@@ -148,7 +148,7 @@ class Libro(models.Model):
     disponibile = models.BooleanField(default=True, verbose_name='Disponibile')
     
     # Aggiungo field per le cover
-    cover_url = models.URLField(max_length=300, default='immagini/libro_default.png')
+    cover_url = models.URLField(max_length=300, blank=True, default='immagini/libro_default.png')
 
     # DateTimeField con auto_now_add=True: viene impostato automaticamente
     # alla data e ora ATTUALI quando il record viene creato.
