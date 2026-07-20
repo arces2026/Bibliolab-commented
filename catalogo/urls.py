@@ -55,17 +55,29 @@ urlpatterns = [
     path(
         "api/libri/<int:pk>/", api_views.api_libro_dettaglio, name="api_libro_dettaglio"
     ),
-    # ── API REST v1 (con DRF APIView) ──────────────────────────────────────────
-    path("api/v1/libri/", api_views.LibroListAPIView.as_view(), name="api_v1_libri"),
+    # ── API REST v1 (con DRF APIView) -usati per il frontend Vue ───────────────
+    path("api/v1/libri/", api_views.LibroListApiView.as_view(), name="api_v1_libri"),
     path(
         "api/v1/libri/<int:pk>/",
-        api_views.LibroDetailAPIView.as_view(),
+        api_views.LibroDetailApiView.as_view(),
         name="api_v1_libro_dettaglio",
     ),
-    path('api/v1/autori/', api_views.AutoreListApiView.as_view(), name='api_v1_autori'),
-    path('api/v1/autori/<int:pk>', api_views.AutoreListApiView.as_view(), name='api_v1_autori_dettaglio'),
-    path('api/v1/categorie/', api_views.CategoriaListApiView.as_view(), name='api_v1_categorie'),
-    path('api/v1/categorie/<int:pk>', api_views.CategoriaListApiView.as_view(), name='api_v1_categorie_dettaglio'),
+    path("api/v1/autori/", api_views.AutoreListApiView.as_view(), name="api_v1_autori"),
+    path(
+        "api/v1/autori/<int:pk>",
+        api_views.AutoreListApiView.as_view(),
+        name="api_v1_autori_dettaglio",
+    ),
+    path(
+        "api/v1/categorie/",
+        api_views.CategoriaListApiView.as_view(),
+        name="api_v1_categorie",
+    ),
+    path(
+        "api/v1/categorie/<int:pk>",
+        api_views.CategoriaListApiView.as_view(),
+        name="api_v1_categorie_dettaglio",
+    ),
 ]
 
 # ── API REST v2 (con Django REST Framework e Router) ──────────────────────────

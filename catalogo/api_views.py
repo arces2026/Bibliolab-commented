@@ -99,11 +99,11 @@ def api_libro_dettaglio(request, pk):
 
 
 # ══════════════════════════════════════════════════════════════
-# API CON DJANGO REST FRAMEWORK (APIView)
+# API CON DJANGO REST FRAMEWORK (APIView) - usati per il frontend Vue
 # ══════════════════════════════════════════════════════════════
 
 
-class LibroListAPIView(APIView):
+class LibroListApiView(APIView):
     """
     GET /api/v1/libri/  — lista libri con serializzazione DRF
     POST /api/v1/libri/ — crea un nuovo libro (solo autenticati)
@@ -150,7 +150,7 @@ class LibroListAPIView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-class LibroDetailAPIView(APIView):
+class LibroDetailApiView(APIView):
     """
     GET /api/v1/libri/<pk>/    — dettaglio singolo libro
     PATCH /api/v1/libri/<pk>/  — aggiornamento parziale
