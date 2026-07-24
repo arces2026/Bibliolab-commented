@@ -204,7 +204,8 @@ class AutoreListApiView(APIView):
         """
 
         # QuerySet base per tutti gli autori
-        qs = Autore.objects.all()
+        # qs = Autore.objects.all()
+        qs = Autore.objects.all().prefetch_related('libri')
 
         # Filtro opzionale per ricerca per nome o cognome
         search = request.GET.get("search")

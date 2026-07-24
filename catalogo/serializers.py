@@ -17,12 +17,13 @@ class AutoreSerializer(serializers.ModelSerializer):
     ModelSerializer genera automaticamente i campi dal Model,
     come ModelForm fa per i Form.
     """
+    libri_titles = serializers.StringRelatedField(many=True, source='libri')
 
     class Meta:
         model  = Autore  # Model di riferimento
         # fields: lista dei campi da includere nella rappresentazione JSON.
         # 'id' e il pk generato automaticamente da Django.
-        fields = ['id', 'nome', 'cognome', 'data_nascita']
+        fields = ['id', 'nome', 'cognome', 'data_nascita', 'biografia', 'libri_titles']
 
 
 class CategoriaSerializer(serializers.ModelSerializer):

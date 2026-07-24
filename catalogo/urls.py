@@ -65,7 +65,7 @@ urlpatterns = [
     path("api/v1/autori/", api_views.AutoreListApiView.as_view(), name="api_v1_autori"),
     path(
         "api/v1/autori/<int:pk>",
-        api_views.AutoreListApiView.as_view(),
+        api_views.AutoreDetailApiView.as_view(),
         name="api_v1_autori_dettaglio",
     ),
     path(
